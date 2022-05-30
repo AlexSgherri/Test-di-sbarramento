@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  height: 100vh;
+}
+
+.body-wrapper{
+    width: 100%;
+    height:100%
+}
+
+aside {
+  background-color: gray;
+  padding-top: 1rem;
+  width: 30%;
+  min-width: fit-content;
+  height: 100%;
+}
+aside .rectangle {
+  background-color: purple;
+  width: 5rem;
+  height: 2rem;
+  margin: 0 auto;
+}
+
+
+
+.main-body {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.main-body .header-side {
+  background-color: lightgrey;
+  width: 100%;
+  min-height: fit-content;
+  height: 15%;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1rem;
+}
+
+.main-body .header-side .rectangle {
+  height: 2rem;
+  width: 5rem;
+  background-color: purple;
+  display: none;
+}
+
+.main-body .header-side .dh-logo {
+  background-color: grey;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  border-radius: 2px;
+  text-align: center;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+main .main-box {
+  width: 80%;
+  height: 40%;
+  background-color: green;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .main-box input::placeholder {
+  padding-left: 2rem;
+}
+
+main .main-box .dh-logo {
+    width: 4rem;
+    height: 1.5rem;
+    background-color: grey;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+main .circle {
+    width: 2rem;
+    height: 2rem;
+background-color: yellow;
+border-radius: 50%;
+position: absolute;
+bottom:2rem;
+right:2rem;
+}
+
+@media (max-width:360px) {
+    main {
+        height: 100%;
+        width: 100%;
+        align-items: unset;
+        justify-content: unset;
+      }
+    main .main-box{
+        width: 100%;
+    }
+    aside {
+        display: none;
+    }
+    .main-body .header-side {
+        width: 100%;
+        min-height: fit-content;
+        justify-content: space-between;
+      }
+    .main-body .header-side .rectangle {
+        display: unset;
+      }
+    .circle{
+        left:2rem;
+    }
+}
